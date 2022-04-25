@@ -1,0 +1,24 @@
+<form (submit)="onSubmit($event)">
+  <label>
+    Name
+    <input
+      class="input"
+      name="name"
+      [value]="name"
+      (change)="onInputChange($event)"
+      type="text"
+    />
+  </label>
+  <label>
+    Number
+    <input
+      (change)="onInputChange($event)"
+      class="input"
+      name="phone"
+      pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+      type="text"
+      [value]="phone"
+    />
+  </label>
+  <button type="submit">Add contact</button>
+</form>
